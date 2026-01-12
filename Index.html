@@ -14,9 +14,23 @@
             .print-shadow-none { box-shadow: none !important; border: none !important; }
             body { background-color: white !important; padding: 0 !important; }
         }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-900 p-4 md:p-10">
+<body class="bg-slate-50 font-sans text-slate-900 p-4 md:p-10 leading-relaxed">
 
     <!-- UI ACTIONS (Hidden on Print) -->
     <div class="max-w-6xl mx-auto mb-6 flex justify-between items-center no-print">
@@ -103,8 +117,8 @@
                         <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-amber-500 rounded-full" style="width: 33%"></div></div>
                     </div>
                     <div class="space-y-2">
-                        <div class="flex justify-between items-end"><span class="text-sm font-bold text-slate-700">Manikgonj</span><span class="text-xs font-black text-rose-500">19 Cases</span></div>
-                        <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full" style="width: 26%"></div></div>
+                        <div class="flex justify-between items-end"><span class="text-sm font-bold text-slate-700">Manikganj</span><span class="text-xs font-black text-rose-500">19 Cases</span></div>
+                        <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full" style="width: 27%"></div></div>
                     </div>
                 </div>
             </div>
@@ -142,22 +156,22 @@
                 <i data-lucide="history" class="text-rose-500"></i> Recent Sentinel Feed
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl transition-colors hover:bg-white/10">
                     <h4 class="text-base font-black">Bhola</h4>
                     <p class="text-[10px] text-rose-400 font-bold uppercase mb-2 tracking-widest">Fatal Case</p>
                     <p class="text-[10px] text-slate-400 font-medium leading-tight">First ever case in Barisal Division (2025).</p>
                 </div>
-                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl transition-colors hover:bg-white/10">
                     <h4 class="text-base font-black">Pabna</h4>
                     <p class="text-[10px] text-rose-400 font-bold uppercase mb-2 tracking-widest">Fatal Case</p>
                     <p class="text-[10px] text-slate-400 font-medium leading-tight">Laboratory confirmed Jan 29 (2025).</p>
                 </div>
-                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl transition-colors hover:bg-white/10">
                     <h4 class="text-base font-black">Faridpur</h4>
                     <p class="text-[10px] text-rose-400 font-bold uppercase mb-2 tracking-widest">Fatal Case</p>
                     <p class="text-[10px] text-slate-400 font-medium leading-tight">Historic high-burden district cluster.</p>
                 </div>
-                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                <div class="p-4 bg-white/5 border border-white/10 rounded-2xl transition-colors hover:bg-white/10">
                     <h4 class="text-base font-black">Naogaon</h4>
                     <p class="text-[10px] text-rose-400 font-bold uppercase mb-2 tracking-widest">Fatal Case</p>
                     <p class="text-[10px] text-slate-400 font-medium leading-tight">Off-season; fruit suspected (Aug 2025).</p>
@@ -166,8 +180,8 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="pt-10 border-t-2 border-slate-100 flex justify-between items-end">
-            <div class="flex flex-wrap gap-x-6 gap-y-3 font-bold text-[10px] text-slate-400 uppercase">
+        <footer class="pt-10 border-t-2 border-slate-100 flex flex-col md:flex-row justify-between items-center md:items-end gap-6">
+            <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 font-bold text-[10px] text-slate-400 uppercase">
                 <span>IEDCR Laboratory</span>
                 <span>icddr,b Support</span>
                 <span>One Health Network</span>
